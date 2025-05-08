@@ -20,7 +20,7 @@ body {
     background-image: radial-gradient(
       circle at 50% 40%,
       #414141 0%,
-      black calc(40% - 5vw)
+      black 40%
     );
     background-size: 100% 100%;
     background-position: center;
