@@ -9,6 +9,8 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        golden: "#B59410",
+        grey: "#D9D9D9",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
