@@ -19,9 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body
+        className={`${inter.className} antialiased flex flex-col justify-center items-center`}
+      >
         <Navbar />
-        <main className="min-h-screen flex flex-col lg:p-8 p-4">
+        <main className="min-h-screen flex flex-col max-w-800 lg:p-8 p-4">
           {children}
         </main>
       </body>

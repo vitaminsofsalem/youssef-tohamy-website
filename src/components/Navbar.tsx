@@ -17,7 +17,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="top-0 left-0 right-0 z-50 p-4 lg:p-8">
+    <nav className="top-0 left-0 right-0 z-50 w-full p-4 lg:p-8">
       <div className="w-full mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Empty div for mobile layout balance */}

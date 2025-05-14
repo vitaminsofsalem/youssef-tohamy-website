@@ -7,12 +7,16 @@
 @theme _ {
   --color-golden: #b59410;
   --color-grey: #d9d9d9;
+  --breakpoint-ultrawide: 2560px;
 }
 :root {
   --background: #000000;
   --foreground: #ffffff;
   --mask-fade-bottom: linear-gradient(to top, transparent 0%, black 20%);
   --gradient-fade: 30%;
+  --text-high-contrast-rgb-value: 230, 230, 230;
+  --text-body: rgb(222, 222, 222);
+  --detail-medium-contrast: rgb(25, 25, 25);
   font-size: 62.5%;
 }
 
@@ -84,12 +88,12 @@ body {
   }
 
   .bg-number {
-    @apply absolute top-10 left-0 text-white/10 font-extrabold 
+    @apply absolute text-white/10 font-extrabold 
     text-[clamp(10rem,calc(10vw+3rem),20rem)] leading-none;
   }
 
   .title {
-    @apply text-golden text-[clamp(2rem,4vw,5rem)] font-extrabold;
+    @apply text-golden text-[clamp(3.5rem,4vw,5rem)] font-extrabold;
   }
 
   .text {
