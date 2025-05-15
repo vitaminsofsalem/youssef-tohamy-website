@@ -28,6 +28,10 @@
   --gradient-vertical-position: 40%;
 }
 
+.bg-contact-gradient-dynamic {
+  --gradient-vertical-position: 45%;
+}
+
 @media (min-width: 1024px) and (max-width: 1440px) {
   :root {
     --gradient-fade: 32.5%;
@@ -66,6 +70,13 @@ body {
       #414141 0%,
       black 50%
     );
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-contact-gradient-dynamic {
+    background-image: radial-gradient(circle at 60% 44%, #414141 0%, black 50%);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;

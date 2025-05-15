@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Blog from "@/components/Blog";
 import Career from "@/components/Career";
+import Contact from "@/components/Contact";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Blog />
       <Gallery />
       <Career />
+      <Contact />
     </div>
   );
 }
