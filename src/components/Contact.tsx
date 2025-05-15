@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
           <div className="flex justify-center items-center flex-1 p-8">
             <Form
               action="/submit"
-              className="flex flex-col gap-8 h-fit w-full p-8 border-2 border-golden"
+              className="flex flex-col gap-8 h-fit w-full p-8 border-2 rounded-2xl border-golden"
             >
               <div className="flex flex-col gap-8">
                 <input

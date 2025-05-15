@@ -13,7 +13,7 @@ const Button: FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "text-white font-light cursor-pointer transition-colors duration-200 text-[clamp(1rem,1.5vw,2.25rem)] px-8 py-3 w-fit";
+    "text-white font-light rounded-lg cursor-pointer transition-colors duration-200 text-[clamp(1rem,1.5vw,2.25rem)] px-8 py-3 w-fit";
 
   const variants = {
     primary: "bg-golden hover:bg-[#997c0d]",
