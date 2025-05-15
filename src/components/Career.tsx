@@ -21,10 +21,11 @@ const Career: React.FC = () => {
               it&apos;s the path that&apos;s brought me closer to the kind of
               engineer and creator I aim to be.
             </p>
-            <Button>Check my resume</Button>
+            <Button>Check my resume</Button> {/* TODO: Add link to resume */}
           </div>
         </div>
 
+        {/* JOURNEY SECTION */}
         <div className="hidden md:flex relative flex-1 justify-start items-start w-[clamp(20rem,50vw,110rem)] h-[clamp(25rem,60vw,110rem)] bg-about-gradient-dynamic">
           <Image
             src={fakeJoeFacingRoad}
@@ -37,8 +38,6 @@ const Career: React.FC = () => {
           />
         </div>
       </div>
-
-      {/* BLOG PREVIEW SECTION */}
     </div>
   );
 };
