@@ -49,8 +49,8 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/80">
+        <div className="md:hidden relative">
+          <div className="absolute w-full px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/80">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
