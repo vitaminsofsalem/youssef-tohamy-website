@@ -1,12 +1,53 @@
-@import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer theme, base, components, utilities;
 
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme _ {
+  --color-golden: #b59410;
+  --color-grey: #d9d9d9;
+  --breakpoint-ultrawide: 2560px;
+}
 :root {
   --background: #000000;
   --foreground: #ffffff;
   --mask-fade-bottom: linear-gradient(to top, transparent 0%, black 20%);
+  --gradient-fade: 30%;
+  --text-high-contrast-rgb-value: 230, 230, 230;
+  --text-body: rgb(222, 222, 222);
+  --detail-medium-contrast: rgb(25, 25, 25);
+  font-size: 62.5%;
+}
+
+.hero-section {
+  --hero-font-size: 2.6rem;
+}
+
+.bg-about-gradient-dynamic {
+  --gradient-vertical-position: 40%;
+}
+
+.bg-contact-gradient-dynamic {
+  --gradient-vertical-position: 45%;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  :root {
+    --gradient-fade: 32.5%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    --hero-font-size: 5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bg-about-gradient-dynamic {
+    --gradient-vertical-position: 49.5%;
+  }
 }
 
 body {
@@ -16,14 +57,57 @@ body {
 }
 
 @layer components {
-  .bg-gradient-dynamic {
+  .bg-hero-gradient-dynamic {
+    background-image: radial-gradient(circle at 50% 38%, #414141 0%, black 45%);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-about-gradient-dynamic {
     background-image: radial-gradient(
-      circle at 50% 40%,
+      circle at 40% var(--gradient-vertical-position),
       #414141 0%,
-      black 40%
+      black 50%
     );
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .bg-contact-gradient-dynamic {
+    background-image: radial-gradient(circle at 60% 44%, #414141 0%, black 50%);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-name {
+    @apply font-extrabold text-[clamp(var(--hero-font-size),calc(2vw+2rem),8.6rem)]  bg-clip-text text-transparent bg-gradient-to-b from-white to-[#656565] leading-none;
+  }
+
+  .hero-subtext {
+    @apply text-[clamp(1.4rem,calc(1vw+0.5rem),4ch)] font-extralight;
+  }
+
+  .hero-social-icon {
+    @apply text-[clamp(2.2rem,calc(1vw+0.5rem),4rem)];
+  }
+
+  .nav-link {
+    @apply px-3 py-2 text-[clamp(1.4rem,calc(1vw+0.5rem),4ch)] font-light;
+  }
+
+  .bg-number {
+    @apply absolute text-white/10 font-extrabold 
+    text-[clamp(10rem,calc(10vw+3rem),20rem)] leading-none;
+  }
+
+  .title {
+    @apply text-golden text-[clamp(3.5rem,4vw,5rem)] font-extrabold;
+  }
+
+  .text {
+    @apply text-[clamp(1.4rem,1.5vw,2.25rem)] leading-relaxed text-justify hyphens-auto;
   }
 }
